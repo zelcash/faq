@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ZelCore FAQ - part of Zel Technologies GmbH</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<!-- Favicon -->
+		<link href="./images/favicon.ico" rel="shortcut icon"/>
+	</head>
+	<body>
+		<main>
+			<h1>Frequently Asked Questions</h1>
+			<input type="text" class="live-search-box" placeholder="Search..." />
+			<div class="topic">
+				<div class="open">
+					<h2 class="question">How?<span class="ptag">ZelNodes</span></h2>
+					<span class="faq-t"></span>
+				</div>
+				<p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="topic">
+				<div class="open">
+					<h2 class="question">Why?<span class="ptag">ZelNodes</span></h2>
+					<span class="faq-t"></span>
+				</div>
+				<p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+		</main>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script>
+		$(".open").click(function() {
+			var container = $(this).parents(".topic");
+			var answer = container.find(".answer");
+			var trigger = container.find(".faq-t");
+
+			answer.slideToggle(200);
+
+			if (trigger.hasClass("faq-o")) {
+				trigger.removeClass("faq-o");
+			} else {
+				trigger.addClass("faq-o");
+			}
+
+			if (container.hasClass("expanded")) {
+				container.removeClass("expanded");
+			} else {
+				container.addClass("expanded");
+			}
+		});
+
+		jQuery(document).ready(function($) {
+			$('.question').each(function() {
+				$(this).attr('data-search-term', $(this).text().toLowerCase() + $(this).find("ptag").text().toLowerCase());
+
+			});
+
+			$('.live-search-box').on('keyup', function() {
+
+				var searchTerm = $(this).val().toLowerCase();
+
+				$('.question').each(function() {
+
+					if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
+						$(this).parent().parent().show();
+					} else {
+						$(this).parent().parent().hide();
+					}
+
+				});
+
+			});
+
+		});
+		</script>
+	</body>
+</html>
