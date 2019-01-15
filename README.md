@@ -1,2 +1,2 @@
-# faq
-FAQ
+# ZelCore FAQ
+ZelCore FAQ
