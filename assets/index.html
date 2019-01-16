@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ZelCore Assets - part of Zel Technologies GmbH</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="style.css" />
+
+		<!-- Favicon -->
+		<link href="../images/favicon.ico" rel="shortcut icon"/>
+	</head>
+	<body>
+		<main>
+			<h1>ZelCore Assets</h1>
+			<input type="text" class="live-search-box" placeholder="Search..." />
+
+			<section class="cards">
+				<article class="card card--1">
+					<div class="card__info-hover">
+						<div class="card__clock-info">
+							<span class="card__time">BTC</span>
+						</div>
+					</div>
+					<div class="card__img"></div>
+					<div class="card__img--hover"></div>
+					<div class="card__info">
+						<span class="card__category">Bitcoin</span>
+						<h3 class="card__title">Bitcoin</h3>
+						<a href="#"><i class="fas fa-globe"></i> Website</a>
+						<a href="#"><i class="fas fa-search"></i> Explorer</a>
+						<a href="#"><i class="fas fa-chart-bar"></i> CMC</a>
+					</div>
+				</article>
+
+				<article class="card card--2">
+					<div class="card__info-hover">
+						<div class="card__clock-info">
+							<span class="card__time">ETC</span>
+						</div>
+					</div>
+					<div class="card__img"></div>
+					<div class="card__img--hover"></div>
+					<div class="card__info">
+						<span class="card__category">ERC-20</span>
+						<h3 class="card__title">Ethereum</h3>
+						<a href="#"><i class="fas fa-search"></i> Explorer</a>
+						<a href="#"><i class="fab fa-discord"></i> Discord</a>
+					</div>
+				</article>
+
+					<article class="card card--3">
+						<div class="card__info-hover">
+							<div class="card__clock-info">
+								<span class="card__time">ZEL</span>
+							</div>
+						</div>
+						<div class="card__img"></div>
+						<div class="card__img--hover"></div>
+						<div class="card__info">
+							<span class="card__category">Equihash</span>
+							<h3 class="card__title">ZelCash</h3>
+							<a href="#"><i class="fas fa-globe"></i> Website</a>
+							<a href="#"><i class="fas fa-search"></i> Explorer</a>
+							<a href="#"><i class="fab fa-discord"></i> Discord</a>
+						</div>
+					</article>
+				</section>
+			</main>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script>	
+				jQuery(document).ready(function($) {
+					$('.card').each(function() {
+						$(this).attr('data-search-term', $(this).text().toLowerCase());
+					});
+
+					$('.live-search-box').on('keyup', function() {
+		
+						var searchTerm = $(this).val().toLowerCase();
+		
+						$('.card').each(function() {
+		
+							if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
+								$(this).show();
+							} else {
+								$(this).hide();
+							}
+		
+						});
+		
+					});
+		
+				});
+				</script>
+	</body>
+</html>
