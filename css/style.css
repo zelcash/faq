@@ -71,11 +71,11 @@ h1 {
 }
 
 .question {
-  padding-top: 30px;
+  padding-top: 20px;
   padding-right: 40px;
   padding-bottom: 20px;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 300;
   color: #f9f9f9;
 }
 
@@ -130,4 +130,23 @@ h1 {
     padding-left: 0px;
     padding-right: 0px;
   }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "FAQ Live";
+}
+
+.FAQ { grid-area: FAQ; }
+
+.FAQ main {
+  margin-right: 10px;
+}
+
+.Live { grid-area: Live; }
+
+.Live main {
+  margin-left: 10px;
 }

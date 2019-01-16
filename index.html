@@ -12,201 +12,215 @@
 		<link href="./images/favicon.ico" rel="shortcut icon"/>
 	</head>
 	<body>
-		<main>
-			<h1>Frequently Asked Questions</h1>
-			<input type="text" class="live-search-box" placeholder="Search..." />
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">What is Portfolio?<span class="ptag">Wallet, Portfolio</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">Portfolio hosts all the assets supported by ZelCore. To use a asset simply click on it's icon to bring you to the assets wallet page.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">What are Contacts?<span class="ptag">contacts</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">In ZelCore, contacts are your saved addresses. For example, when you send or receive coins from an exchange, or any other 3rd party (friends) you can assign a name to that address for future use.
-					For coins with zk-SNARKS, you can save both Z-Addresses (Shielded) or T-Addresses (Transparent) in your contacts.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">What are Shielded Addresses?<span class="ptag">shielded, zaddresses, z-addresses, addresses, zksnarks, privacy</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">A Shielded Address provides anonymous/private transactions using zk-SNARKS. All transactions sent or received via that address will not be visible on the coins explorer.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">What are FullNodes?<span class="ptag">FullNodes, full node, node</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">When a user opts to run a FullNode wallet, ZelCore will download a copy of the full blockchain of the selected coin on the user's computer.
-					This is only recommended for the users who want to use private Z-addresses, as using FullNode will consume extra system resources (CPU and Storage.)</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">Do I need to use FullNode?<span class="ptag">FullNodes, full node, node</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">Other than private transactions, FullNodes can utilise advance features such as importing existing private Keys and re-scanning of blockchains to import a previous (existing) wallet.dats from other wallet apps.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">What are Peers, Height and Headers?<span class="ptag">peers, height, headers, fullnode, node, full node</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">Once the FullNode is downloaded for a coin in ZelCore, ‘Peers’ display the number of peer-to-peer connections ZelCore has made with other Nodes for that coin.
-					<br>
-					The height is the number of blocks in the blockchain between it and the genesis block (genesis block height is 0). When 100% synced, the user should see the most recent block height numbers as per the coins explorer.
-					<br>
-					Each block on the blockchain is identified by a block header. When a wallet is 100% synced, the headers show the most recent block height.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">How many Peer to Peer connections are considered good/okay?<span class="ptag">peer to peer, peer, connections, node, fullnode, full node</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">By default ZelCore will connect up to 10 peers. Anything over 5 peers is considered good/okay.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">After downloading FullNode on ZelCore, the wallet synchronization is slow?<span class="ptag">fullnode, full, node, full node, synchronization</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">The FullNode wallet on ZelCore syncs to the most recent block height, every time FullNode is launched on ZelCore.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">How can I change the currency from USD to BTC or other fiat currency?<span class="ptag">rates, currency</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">Click on your profile and then select your desired currency, from the drop down menu.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">How can I add a picture to my profile?<span class="ptag">picture, profile, settings</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">Click your profile to add/change your profile picture.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">How can I see my private keys?<span class="ptag">private keys, private, key, export, wallet, privatekey</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">Click on your profile to see your private keys.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">How can I create multiple wallets?<span class="ptag">wallets, accounts, multiple accounts</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">You have 3 wallets per asset by default but you can create a new account on the launch page.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">How can I import my previous wallets into ZelCore?<span class="ptag">import, privatekey, private keys, keys, wallets, wallet</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">You need to activate FullNode for the coin you wish to import into ZelCore, and then select Tools > Import My Private Key and/or Re-Scan Blockchain.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">What does rescan blockchain mean?<span class="ptag">blockchain, rescan, fullnode, node, full node</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">Rescanning allows ZelCore to sweep the blockchains for available funds under all addresses within your wallet.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">What is a private key?<span class="ptag">privatekey, private keys, keys, wallets, wallet</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">A private key is not a wallet address. It is a key to access your funds. Private Keys unlock and allow transfer of funds from your wallet.
-					If you lose it, you practically lose access to your funds. Treat your private keys like the keys to your house, make sure you have a spare copy stored somewhere safe.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">What is the encryption key?<span class="ptag">key, encryptionkey, encryption key, security</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">The encryption key is used by ZelCore to encrypt all the wallets in ZelCore.
-					When a new account with a new username and password is created ZelCore takes the password and creates a salted hash from it. ZelCore then adds the username to that salted hash and creates another salted hash from that value. This value (SHA256 hash) is the user’s encryption key.
-					<br>
-					The encryption key is used to encrypt both contacts.json and wallet.dat files with the AES-256-CTR algorithm.
-					<br>
-					When a user selects a coin in FullNode for the first time, ZelCore accesses the coins default path and reads its wallet.dat file.
-					<br>
-					If the wallet.dat file exists and has not been used, ZelCore creates a backup called (wallet.dat*TIMESTAMP*BACKUP) and uses it to access the addresses inside of the wallet.dat.
-					<br>
-					When ZelCore closes the coins daemon and other FullNode processes are shutdown. ZelCore then takes this wallet.dat and encrypts it with the encryption key and then gives the output of wallet.datUSERNAME , allowing for multiple users on the same device and increased security.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">How many MB of disk space is required to run ZelCore?<span class="ptag">storage, space, hard drive, gb, mb</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">Initial setup requires less than 200 MB.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">How many GB of disk space is required to run ZelCore with all coins enabled?<span class="ptag">gb, mb, full node, node, fullnode</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">To run ZelCore with no FullNodes activated you need roughly 300 MB. It is not recommended to download FullNode for coins other than those you require Z-addresses for. Currently, Zelcash FullNode requires about 700 MB at the moment.
-					Zcash FullNode requires around 2GB at the moment.
-					Bitcoin FullNodes are expected to be up to 300 GB.
-					So the amount of disk space required will change from coin to coin.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">How can I secure (encrypt/backup) my wallets?<span class="ptag">backup, back up, back</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">ZelCore is encrypted and backed up by default. When you log into ZelCore, all the wallets are decrypted. So it is advisable to logout or quit/exit out of ZelCore when you are not using it to allow ZelCore to encrypt and back-itself-up.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">What are Apps?<span class="ptag">apps, dapps, decentralised applications, decentralized applications, d-apps, app store</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">Currently the only App available is Zel ID which allows you to enhance the security of ZelCore amongst other things in the future. Other applications are in development and will be added here before the Apps section is opened into a full fledged App Store.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">I forgot my username/password. How can I recover them?<span class="ptag">recover, username, password, account, details, help, lost, forgot, user name</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">ZelCore does not keep a copy of unencrypted password locally nor remotely. Due to this feature, there's no way to retrieve the password nor to change it.
-					When you lose (or forget) either username or password, you will lose access to your wallet PERMANENTLY. Thus it is IMPORTANT and IMPERATIVE that you keep a copy of your information somewhere safe.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">ZelCore source code?<span class="ptag">source code, open source, code, opensource, closed source, closed</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">ZelCore has been written by and is a property of Zel Technologies .GmbH. As such the source code is not public and is company property.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">Credits<span class="ptag">credits, authors</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">Tadeas Kmenta, Matthew Reichardt, Rafael Janetzek, Miles Manley and Lumi Ibishi.</p>
-			</div>
-			<div class="topic">
-				<div class="open">
-					<h2 class="question">Why?<span class="ptag">ZelNodes</span></h2>
-					<span class="faq-t"></span>
-				</div>
-				<p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div>
-			<h1>Live Support</h1>
-			<iframe src="https://titanembeds.com/embed/404415190835134464?defaultchannel=407015772225929217&fixedsidenav=true&scrollbartheme=minimal-dark&lockscrollbar=true&theme=DiscordDark&username=helpme" height="600" width="100%" frameborder="0"></iframe>
-			</div>
-		</main>
+		<div class="grid-container">
+      <div class="FAQ">
+        <main>
+          <h1>Frequently Asked Questions</h1>
+          <input type="text" class="live-search-box" placeholder="Search..." />
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">What is Portfolio?<span class="ptag">Wallet, Portfolio</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">Portfolio hosts all the assets supported by ZelCore. To use a asset simply click on it's icon to bring you to the assets wallet page.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">What are Contacts?<span class="ptag">contacts</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">In ZelCore, contacts are your saved addresses. For example, when you send or receive coins from an exchange, or any other 3rd party (friends) you can assign a name to that address for future use.
+              For coins with zk-SNARKS, you can save both Z-Addresses (Shielded) or T-Addresses (Transparent) in your contacts.
+            </p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">What are Shielded Addresses?<span class="ptag">shielded, zaddresses, z-addresses, addresses, zksnarks, privacy</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">A Shielded Address provides anonymous/private transactions using zk-SNARKS. All transactions sent or received via that address will not be visible on the coins explorer.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">What are FullNodes?<span class="ptag">FullNodes, full node, node</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">When a user opts to run a FullNode wallet, ZelCore will download a copy of the full blockchain of the selected coin on the user's computer.
+              This is only recommended for the users who want to use private Z-addresses, as using FullNode will consume extra system resources (CPU and Storage.)
+            </p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">Do I need to use FullNode?<span class="ptag">FullNodes, full node, node</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">Other than private transactions, FullNodes can utilise advance features such as importing existing private Keys and re-scanning of blockchains to import a previous (existing) wallet.dats from other wallet apps.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">What are Peers, Height and Headers?<span class="ptag">peers, height, headers, fullnode, node, full node</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">Once the FullNode is downloaded for a coin in ZelCore, ‘Peers’ display the number of peer-to-peer connections ZelCore has made with other Nodes for that coin.
+              <br>
+              The height is the number of blocks in the blockchain between it and the genesis block (genesis block height is 0). When 100% synced, the user should see the most recent block height numbers as per the coins explorer.
+              <br>
+              Each block on the blockchain is identified by a block header. When a wallet is 100% synced, the headers show the most recent block height.
+            </p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">How many Peer to Peer connections are considered good/okay?<span class="ptag">peer to peer, peer, connections, node, fullnode, full node</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">By default ZelCore will connect up to 10 peers. Anything over 5 peers is considered good/okay.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">After downloading FullNode on ZelCore, the wallet synchronization is slow?<span class="ptag">fullnode, full, node, full node, synchronization</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">The FullNode wallet on ZelCore syncs to the most recent block height, every time FullNode is launched on ZelCore.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">How can I change the currency from USD to BTC or other fiat currency?<span class="ptag">rates, currency</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">Click on your profile and then select your desired currency, from the drop down menu.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">How can I add a picture to my profile?<span class="ptag">picture, profile, settings</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">Click your profile to add/change your profile picture.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">How can I see my private keys?<span class="ptag">private keys, private, key, export, wallet, privatekey</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">Click on your profile to see your private keys.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">How can I create multiple wallets?<span class="ptag">wallets, accounts, multiple accounts</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">You have 3 wallets per asset by default but you can create a new account on the launch page.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">How can I import my previous wallets into ZelCore?<span class="ptag">import, privatekey, private keys, keys, wallets, wallet</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">You need to activate FullNode for the coin you wish to import into ZelCore, and then select Tools > Import My Private Key and/or Re-Scan Blockchain.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">What does rescan blockchain mean?<span class="ptag">blockchain, rescan, fullnode, node, full node</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">Rescanning allows ZelCore to sweep the blockchains for available funds under all addresses within your wallet.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">What is a private key?<span class="ptag">privatekey, private keys, keys, wallets, wallet</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">A private key is not a wallet address. It is a key to access your funds. Private Keys unlock and allow transfer of funds from your wallet.
+              If you lose it, you practically lose access to your funds. Treat your private keys like the keys to your house, make sure you have a spare copy stored somewhere safe.
+            </p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">What is the encryption key?<span class="ptag">key, encryptionkey, encryption key, security</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">The encryption key is used by ZelCore to encrypt all the wallets in ZelCore.
+              When a new account with a new username and password is created ZelCore takes the password and creates a salted hash from it. ZelCore then adds the username to that salted hash and creates another salted hash from that value. This value (SHA256 hash) is the user’s encryption key.
+              <br>
+              The encryption key is used to encrypt both contacts.json and wallet.dat files with the AES-256-CTR algorithm.
+              <br>
+              When a user selects a coin in FullNode for the first time, ZelCore accesses the coins default path and reads its wallet.dat file.
+              <br>
+              If the wallet.dat file exists and has not been used, ZelCore creates a backup called (wallet.dat*TIMESTAMP*BACKUP) and uses it to access the addresses inside of the wallet.dat.
+              <br>
+              When ZelCore closes the coins daemon and other FullNode processes are shutdown. ZelCore then takes this wallet.dat and encrypts it with the encryption key and then gives the output of wallet.datUSERNAME , allowing for multiple users on the same device and increased security.
+            </p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">How many MB of disk space is required to run ZelCore?<span class="ptag">storage, space, hard drive, gb, mb</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">Initial setup requires less than 200 MB.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">How many GB of disk space is required to run ZelCore with all coins enabled?<span class="ptag">gb, mb, full node, node, fullnode</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">To run ZelCore with no FullNodes activated you need roughly 300 MB. It is not recommended to download FullNode for coins other than those you require Z-addresses for. Currently, Zelcash FullNode requires about 700 MB at the moment.
+              Zcash FullNode requires around 2GB at the moment.
+              Bitcoin FullNodes are expected to be up to 300 GB.
+              So the amount of disk space required will change from coin to coin.
+            </p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">How can I secure (encrypt/backup) my wallets?<span class="ptag">backup, back up, back</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">ZelCore is encrypted and backed up by default. When you log into ZelCore, all the wallets are decrypted. So it is advisable to logout or quit/exit out of ZelCore when you are not using it to allow ZelCore to encrypt and back-itself-up.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">What are Apps?<span class="ptag">apps, dapps, decentralised applications, decentralized applications, d-apps, app store</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">Currently the only App available is Zel ID which allows you to enhance the security of ZelCore amongst other things in the future. Other applications are in development and will be added here before the Apps section is opened into a full fledged App Store.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">I forgot my username/password. How can I recover them?<span class="ptag">recover, username, password, account, details, help, lost, forgot, user name</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">ZelCore does not keep a copy of unencrypted password locally nor remotely. Due to this feature, there's no way to retrieve the password nor to change it.
+              When you lose (or forget) either username or password, you will lose access to your wallet PERMANENTLY. Thus it is IMPORTANT and IMPERATIVE that you keep a copy of your information somewhere safe.
+            </p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">ZelCore source code?<span class="ptag">source code, open source, code, opensource, closed source, closed</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">ZelCore has been written by and is a property of Zel Technologies .GmbH. As such the source code is not public and is company property.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">Credits<span class="ptag">credits, authors</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">Tadeas Kmenta, Matthew Reichardt, Rafael Janetzek, Miles Manley and Lumi Ibishi.</p>
+          </div>
+          <div class="topic">
+            <div class="open">
+              <h2 class="question">Why?<span class="ptag">ZelNodes</span></h2>
+              <span class="faq-t"></span>
+            </div>
+            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </main>
+      </div>
+      <div class="Live">
+        <main>
+          <h1>Live Support</h1>
+          <iframe src="https://titanembeds.com/embed/404415190835134464?defaultchannel=407015772225929217&fixedsidenav=true&scrollbartheme=minimal-dark&lockscrollbar=true&theme=DiscordDark&username=helpme" height="600" width="100%" frameborder="0"></iframe>
+        </main>
+      </div>
+    </div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
