@@ -61,7 +61,6 @@
 			});
 		</script>
 		<script>
-			var priceCoin = getPrice();
 			function getPrice(coinName) {
 				var result = null;
 				$.ajax({
@@ -71,6 +70,27 @@
 					dataType: "json",
 					success: function(data){
 						result = data[coinName].usd;
+					}
+				});
+				return result;
+			}
+			function getConnectionStatus(explorerStatus) {
+				var result = null;
+				$.ajax({
+					async: false,
+					url: explorerStatus + "/api/sync",
+					data: {data},
+					dataType: "json",
+					success: function(data){
+						result = "Online";
+					},
+					error: function(data){
+						result = "Offline";
+					},
+					statusCode: {
+						404: function() {
+							result = "Update";
+						}
 					}
 				});
 				return result;
@@ -86,19 +106,20 @@
 							output += "<tr class='row100 body'>";
 							output += "<td class='cell100 column1'>";
 							output += "<img src='" + data.coins[i].logo + "' style='width: 42px; margin-right: 10px;' />";
-							output += "<span class='search'>" + data.coins[i].coin + " (" + data.coins[i].ticker + ")</span>";
+							output += "<span class='search'>" + data.coins[i].coin + " (" + data.coins[i].ticker.toUpperCase() + ")</span>";
 							output += "</td>";
 							output += "<td class='cell100 column2'>";
-							if (data.coins[i].status.toLowerCase() == 'online') {
+							const explorerStatus = data.coins[i].explorer;
+							if ( getConnectionStatus(explorerStatus).toLowerCase() == 'online') {
 								output += "<i class='fas fa-circle' style='color:limegreen'></i> "
 							};
-							if (data.coins[i].status.toLowerCase() == 'offline') {
+							if (getConnectionStatus(explorerStatus).toLowerCase() == 'offline') {
 								output += "<i class='fas fa-circle' style='color:red'></i> "
 							};
-							if (data.coins[i].status.toLowerCase() == 'update') {
+							if (getConnectionStatus(explorerStatus).toLowerCase() == 'update') {
 								output += "<i class='fas fa-circle' style='color:yellow'></i> "
 							};
-							output += data.coins[i].status;
+							output += getConnectionStatus(explorerStatus);
 							output += "</td>";
 							output += "<td class='cell100 column3'>";
 

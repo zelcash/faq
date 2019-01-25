@@ -3,11 +3,9 @@ var data =
     "coins" : [
         {
             "coin" : "Bitcoin",
-            "ticker" : "BTC",
+            "ticker" : "btc",
             "logo" : "logos/Bitcoin.svg",
-            "status" : "Online",
-            "price" : "1",
-            "explorer" : "#",
+            "explorer" : "https://explorer.btc.zelcore.io",
             "website" : "https://bitcoin.org",
             "twitter" : "twitter",
             "discord" : null,
@@ -16,11 +14,9 @@ var data =
         },
         {
             "coin" : "ZelCash",
-            "ticker" : "Zel",
+            "ticker" : "zel",
             "logo" : "logos/Zelcash.svg",
-            "status" : "Online",
-            "price" : "1",
-            "explorer" : "explorer",
+            "explorer" : "https://explorer.zel.zelcore.io",
             "website" : "https://zel.cash",
             "twitter" : "twitter",
             "discord" : "discord",
@@ -29,12 +25,10 @@ var data =
         },
         {
             "coin" : "Ethereum",
-            "ticker" : "ETC",
+            "ticker" : "etc",
             "logo" : "logos/Ethereum.svg",
-            "status" : "Offline",
-            "price" : "1",
-            "explorer" : "#",
-            "website" : "#",
+            "explorer" : "https://explorer.eth.zelcore.io",
+            "website" : "https://www.ethereum.org",
             "twitter" : "#",
             "discord" : "#",
             "telegram" : "#",
@@ -42,16 +36,14 @@ var data =
         },
         {
             "coin" : "Litecoin",
-            "ticker" : "LTC",
+            "ticker" : "ltc",
             "logo" : "logos/Litecoin.svg",
-            "status" : "Update",
-            "price" : "1",
-            "explorer" : "#",
-            "website" : "#",
+            "explorer" : "https://explorer.ltc.zelcore.io",
+            "website" : "https://litecoin.com",
             "twitter" : "#",
             "discord" : null,
             "telegram" : null,
-            "info" : "Litecoin is the cockroch"
+            "info" : "Litecoin is the cockroach"
         }
     ]
 }
