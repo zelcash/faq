@@ -36,9 +36,12 @@
 
 				<div class="table100-body js-pscroll">
 					<table>
-						<tbody id="allcoins">
+						<tbody id="allCoins">
 						</tbody>
 					</table>
+				</div>
+
+				<div id="allCoinsInfo">
 				</div>
 			</div>
 
@@ -47,6 +50,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 		<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+		<script src="./coins.js" ></script>
 		<script>
 			$('.js-pscroll').each(function(){
 				var ps = new PerfectScrollbar(this);
@@ -57,117 +61,87 @@
 			});
 		</script>
 		<script>
-			function displayArtists() {
-
-				// Our JSON data
-				var data = 
-					{
-						"coins" : [
-							{
-								"coin" : "Bitcoin",
-								"ticker" : "BTC",
-								"logo" : "logos/Bitcoin.svg",
-								"status" : "Online",
-								"price" : "1",
-								"explorer" : "#",
-								"website" : "https://bitcoin.org",
-								"twitter" : "twitter",
-								"discord" : null,
-								"telegram" : null,
-								"info" : "Bitcoin"
-							},
-							{
-								"coin" : "ZelCash",
-								"ticker" : "Zel",
-								"logo" : "logos/Zelcash.svg",
-								"status" : "Online",
-								"price" : "1",
-								"explorer" : "explorer",
-								"website" : "https://zel.cash",
-								"twitter" : "twitter",
-								"discord" : "discord",
-								"telegram" : "telegram",
-								"info" : "ZelCash"
-							},
-							{
-								"coin" : "Ethereum",
-								"ticker" : "ETC",
-								"logo" : "logos/Ethereum.svg",
-								"status" : "Offline",
-								"price" : "1",
-								"explorer" : "#",
-								"website" : "#",
-								"twitter" : "#",
-								"discord" : "#",
-								"telegram" : "#",
-								"info" : "Ethereum"
-							},
-							{
-								"coin" : "Litecoin",
-								"ticker" : "LTC",
-								"logo" : "logos/Litecoin.svg",
-								"status" : "Update",
-								"price" : "1",
-								"explorer" : "#",
-								"website" : "#",
-								"twitter" : "#",
-								"discord" : null,
-								"telegram" : null,
-								"info" : "Litecoin"
-							}
-						]
+			var priceCoin = getPrice();
+			function getPrice(coinName) {
+				var result = null;
+				$.ajax({
+					async: false,
+					url: "https://api.coingecko.com/api/v3/simple/price?ids=" + coinName + "&vs_currencies=usd",
+					data: {data},
+					dataType: "json",
+					success: function(data){
+						result = data[coinName].usd;
 					}
-
+				});
+				return result;
+			}
+			function displayArtists() {
+				
+				// Our JSON data
+				
 					var output = [];
+					var outputInfo = [];
 
 					for (var i in data.coins) {
-							output += "<tr class='row100 body'>"
+							output += "<tr class='row100 body'>";
 							output += "<td class='cell100 column1'>";
 							output += "<img src='" + data.coins[i].logo + "' style='width: 42px; margin-right: 10px;' />";
 							output += "<span class='search'>" + data.coins[i].coin + " (" + data.coins[i].ticker + ")</span>";
-							output += "</td>"
+							output += "</td>";
 							output += "<td class='cell100 column2'>";
 							if (data.coins[i].status.toLowerCase() == 'online') {
 								output += "<i class='fas fa-circle' style='color:limegreen'></i> "
-							}
+							};
 							if (data.coins[i].status.toLowerCase() == 'offline') {
 								output += "<i class='fas fa-circle' style='color:red'></i> "
-							}
+							};
 							if (data.coins[i].status.toLowerCase() == 'update') {
 								output += "<i class='fas fa-circle' style='color:yellow'></i> "
 							};
 							output += data.coins[i].status;
-							output += "</td>"
+							output += "</td>";
 							output += "<td class='cell100 column3'>";
-							output += "Price: " + data.coins[i].price;
-							output += "</td>"
+
+							const coinName = data.coins[i].coin.toLowerCase();
+							output += "Price: $" + getPrice(coinName);
+
+							output += "</td>";
 							output += "<td class='cell100 column4'>";
 							if (data.coins[i].explorer != null) {
 								output += "<a href='" + data.coins[i].explorer + "'><span class='fa-stack fa-lg'><i class='fas fa-circle fa-stack-2x'></i><i class='fas fa-stack-1x fa-search fa-inverse'></i></span></a>"
-							}
+							};
 							if (data.coins[i].twitter != null) {
 								output += "<a href='" + data.coins[i].twitter + "'><span class='fa-stack fa-lg'><i class='fas fa-circle fa-stack-2x'></i><i class='fab fa-stack-1x fa-twitter fa-inverse'></i></span></a>"
-							}
+							};
 							if (data.coins[i].discord != null) {
 								output += "<a href='" + data.coins[i].discord + "'><span class='fa-stack fa-lg'><i class='fas fa-circle fa-stack-2x'></i><i class='fab fa-stack-1x fa-discord fa-inverse'></i></span></a>"
-							}
+							};
 							if (data.coins[i].telegram != null) {
 								output += "<a href='" + data.coins[i].telegram + "'><span class='fa-stack fa-lg'><i class='fas fa-circle fa-stack-2x'></i><i class='fab fa-stack-1x fa-telegram fa-inverse'></i></span></a>"
-							}
-							output += "</td>"
+							};
+							output += "</td>";
 							output += "<td class='cell100 column5'>";
 							if (data.coins[i].website != null) {
 								output += "<a href='" + data.coins[i].website + "'/><span class='fa-stack fa-lg'><i class='fas fa-circle fa-stack-2x'></i><i class='fas fa-stack-1x fa-globe fa-inverse'></i></span></a>"
-							}
+							};
 							if (data.coins[i].info != null) {
-								output += "<a href=''/><span class='fa-stack fa-lg'><i class='fas fa-circle fa-stack-2x'></i><i class='fas fa-stack-1x fa-info fa-inverse'></i></span></a>"
-							}
-							output += "</td>"
-							output += "</tr>"
-					}
-					document.getElementById("allcoins").innerHTML=output;
-			}    
+								output += "<a href='#popup" + i + "'/><span class='fa-stack fa-lg'><i class='fas fa-circle fa-stack-2x'></i><i class='fas fa-stack-1x fa-info fa-inverse'></i></span></a>"
+							};
+							output += "</td>";
+							output += "</tr>";
 
+							// INFO
+
+							outputInfo += "<div id='popup" + i + "' class='overlay'>";
+							outputInfo += "<div class='popup'>";
+							outputInfo += "<h2>" + data.coins[i].coin + "</h2>";
+							outputInfo += "<a class='close' href='#'>&times;</a>";
+							outputInfo += "<div class='content'>" + data.coins[i].info + "</div>"; 
+							outputInfo += "</div></div>";
+					}
+					document.getElementById("allCoins").innerHTML=output;
+					document.getElementById("allCoinsInfo").innerHTML=outputInfo;
+			}
 			// Load the above function when the window loads
 			window.onload = displayArtists;
 		</script>
